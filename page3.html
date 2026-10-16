@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARTS ARENA — Билеты</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+
+  <div class="fon"></div>
+  <div class="zatmenie"></div>
+  <div class="centr"></div>
+
+  <div class="shapka">
+
+    <div class="logo-shapki">
+      <img src="img/1-2.png" alt="лого">
+    </div>
+
+    <div class="knopki-shapki">
+      <a href="index.html" class="ssylka-knopka">
+        <button class="knopka knopka-hudozhniki">ХУДОЖНИКИ</button>
+      </a>
+      <a href="page2.html" class="ssylka-knopka">
+        <button class="knopka knopka-vystavka">ВЫСТАВКА</button>
+      </a>
+      <button class="knopka knopka-karta">КАРТА</button>
+      <button class="knopka knopka-bilety knopka-bilety-aktiv">БИЛЕТЫ!</button>
+    </div>
+
+  </div>
+
+  <div class="zagolovok-podskazka">Ваш билет – аксессуар пропуск</div>
+  <div class="zagolovok-bilety">Билеты!</div>
+
+  <div class="container bilety-obertka">
+
+    <div class="row">
+      <div class="col-12 bilet-blok">
+        <div class="bilet-foto">
+          <img src="img/3-2.png" alt="билет стандарт">
+        </div>
+        <div class="bilet-zagolovok">СТАНДАРТ</div>
+        <div class="bilet-tekst-1">
+          Входной билет на один день фестиваля. Включает доступ к основной экспозиции UV-выставки, программу мероприятий и карту локаций.
+        </div>
+        <div class="bilet-tekst-2">
+          Оптимальный вариант для первого знакомства с цифровым искусством.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 bilet-blok">
+        <div class="bilet-foto">
+          <img src="img/3-3.png" alt="билет премиум">
+        </div>
+        <div class="bilet-zagolovok">ПРЕМИУМ</div>
+        <div class="bilet-tekst-1">
+          Входной билет на все дни фестиваля. Включает доступ к UV-выставке, лекциям, мастер-классам и зоне маркета.
+        </div>
+        <div class="bilet-tekst-2">
+          Для тех, кто хочет погрузиться в атмосферу фестиваля полностью.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 bilet-blok">
+        <div class="bilet-foto">
+          <img src="img/3-4.png" alt="билет мастер">
+        </div>
+        <div class="bilet-zagolovok">МАСТЕР</div>
+        <div class="bilet-tekst-1">
+          VIP-билет на все дни. Включает все зоны фестиваля, закрытые показы, встречи с художниками и подарочный набор.
+        </div>
+        <div class="bilet-tekst-2">
+          Максимальный доступ к фестивалю и его создателям.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foto-na-vsyu-shirinu">
+
+    <div class="pokupka-blok">
+
+      <div class="pokupka-zagolovok">ПОКУПКА БИЛЕТОВ</div>
+
+      <button class="uroven-knopka" data-uroven="standart">СТАНДАРТ</button>
+      <button class="uroven-knopka" data-uroven="premium">ПРЕМИУМ</button>
+      <button class="uroven-knopka vybran" data-uroven="master">МАСТЕР</button>
+
+      <div class="kolichestvo">
+        <button class="kol-knopka kol-minus">−</button>
+        <div class="kol-chislo">1</div>
+        <button class="kol-knopka kol-plus">+</button>
+      </div>
+
+      <input type="text" class="pochta-pole" placeholder="ВАШ E-MAIL ///">
+
+      <div class="kalendar">
+        <div class="kalendar-verh">
+          <button class="kalendar-strelka" id="kalendarNazad">◀</button>
+          <div class="kalendar-mesyac" id="kalendarMesyac">Август 2025</div>
+          <button class="kalendar-strelka" id="kalendarVpered">▶</button>
+        </div>
+        <div class="kalendar-nedelya">
+          <div>ПН</div><div>ВТ</div><div>СР</div><div>ЧТ</div><div>ПТ</div><div>СБ</div><div>ВС</div>
+        </div>
+        <div class="kalendar-dni" id="kalendarDni"></div>
+      </div>
+
+      <div class="cena-blok">
+        <span id="cenaTekst">5000</span>₽
+      </div>
+
+      <button class="oplatit-knopka">Оплатить</button>
+
+    </div>
+
+  </div>
+
+  <div class="podval">
+
+    <div class="podval-festival">фестиваль современного цифрового искусства</div>
+
+    <div class="podval-pochta">kutisart.offic@gmail.com</div>
+
+    <a href="https://instagram.com" target="_blank" class="ikonka-svg ikonka-podvala ikonka-instagram">
+      <img src="img/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://t.me" target="_blank" class="ikonka-svg ikonka-podvala ikonka-telegram">
+      <img src="img/icons/telegram.svg" alt="Telegram">
+    </a>
+    <a href="https://twitter.com" target="_blank" class="ikonka-svg ikonka-podvala ikonka-twitter">
+      <img src="img/icons/twitter.svg" alt="Twitter">
+    </a>
+
+    <div class="podval-logo">
+      <img src="img/1-2.png" alt="лого">
+    </div>
+
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-okno">
+      <div class="modal-zagolovok">Успех!</div>
+      <div class="modal-podzagolovok">Заявка на оплату отправлена</div>
+
+      <div class="modal-stroka">E-mail: <span id="modalPochta"></span></div>
+      <div class="modal-stroka">Уровень: <span id="modalUroven"></span></div>
+      <div class="modal-stroka">Количество билетов: <span id="modalKol"></span></div>
+      <div class="modal-stroka">Даты: <span id="modalDni"></span></div>
+
+      <div class="modal-cena">Итого: <span id="modalCena"></span>₽</div>
+
+      <button class="modal-knopka" id="modalZakryt">Закрыть</button>
+    </div>
+  </div>
+
+  <script src="js/scriptBL.js"></script>
+
+</body>
+</html>

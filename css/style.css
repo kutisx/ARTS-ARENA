@@ -1,0 +1,385 @@
+html, body { margin: 0; padding: 0; }
+html { background: #1a1a1a; }
+
+body {
+  position: relative;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  display: flow-root;
+}
+
+/* фон и затемнения */
+.fon {
+  position: absolute; inset: 0;
+  background: url('../img/1-1.png') no-repeat top center;
+  background-size: 100% 100%;
+  z-index: -3;
+}
+.zatmenie {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.24);
+  z-index: -2;
+  pointer-events: none;
+}
+.centr {
+  position: absolute; top: 0; bottom: 0;
+  left: 50%;
+  margin-left: -35.417vw;
+  width: 70.833vw;
+  background: rgba(0,0,0,0.24);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* шапка */
+.shapka {
+  width: 95.677vw;
+  max-width: 100%;
+  height: 4.6875vw;
+  margin: 2.813vw auto 0;
+  background: #D6D6D6;
+  border-radius: 1.927vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.042vw;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.logo-shapki {
+  width: 9.115vw;
+  height: 3.958vw;
+  background: #3F3D3F;
+  border-radius: 1.406vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+.logo-shapki img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+.knopki-shapki { display: flex; gap: 0.625vw; align-items: center; }
+.ssylka-knopka { text-decoration: none; }
+
+.knopka {
+  background: #ccc;
+  border: 1px solid #999;
+  padding: 0.625vw 1.302vw;
+  cursor: pointer;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.833vw;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.knopka-hudozhniki,
+.knopka-vystavka,
+.knopka-karta,
+.knopka-bilety {
+  width: 12.292vw;
+  height: 3.333vw;
+  border: none;
+  border-radius: 1.406vw;
+  font-size: 1.667vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 0; margin: 0;
+  cursor: pointer;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.knopka-hudozhniki { background: #A09E9E; color: #FFC0DE; }
+.knopka-vystavka    { background: #646264; color: #FFC0DE; }
+.knopka-karta       { background: #3F3D3F; color: #FFC0DE; }
+.knopka-bilety      { background: #C9F955; color: #3F3D3F; }
+
+.knopka:hover,
+.knopka-poverh:hover {
+  filter: brightness(0.9);
+  text-decoration: underline;
+}
+
+/* фото на всю ширину */
+.foto-na-vsyu-shirinu {
+  position: relative;
+  width: 100%;
+  height: 52.083vw;
+  margin-top: 2.865vw;
+  background: url('../img/1-3.png') no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.data-poverh-foto {
+  position: absolute;
+  top: 23.646vw;
+  left: 63.75vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 4.167vw;
+  color: #FFC0DE;
+  line-height: 1;
+}
+
+/* основное содержимое */
+.soderzhanie {
+  width: 70.833vw;
+  max-width: 100%;
+  margin: 0 auto 6.302vw;
+  position: relative;
+  z-index: 2;
+}
+
+.blok-kupit-bilet {
+  display: flex;
+  justify-content: center;
+  padding: 1.563vw 0 0 0;
+}
+
+.knopka-kupit-bilet {
+  width: 22.292vw;
+  height: 5.677vw;
+  background: #C9F955;
+  color: #3F3D3F;
+  border: none;
+  border-radius: 1.406vw;
+  margin: 0; padding: 0;
+  cursor: pointer;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.188vw;
+  text-transform: uppercase;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+/* блоки художников */
+.hudozhnik-blok { position: relative; height: 46.875vw; }
+
+.foto-hudozhnika {
+  position: absolute;
+  top: 8.854vw;
+  left: 35.938vw;
+  width: 28.906vw;
+  height: 36.354vw;
+  border-radius: 1.406vw;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+.obratnyj .foto-hudozhnika { left: 5.99vw; }
+.foto-hudozhnika img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.nakladka { position: absolute; z-index: 2; pointer-events: none; overflow: hidden; }
+.nakladka img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.nakladka-1 { top: 3.333vw; left: 0.938vw; width: 56.354vw; height: 17.5vw; }
+.nakladka-2 { top: -5.729vw; right: 0.938vw; width: 52.188vw; height: 31.927vw; }
+.nakladka-3 { top: 0.521vw; left: 0.938vw; width: 46.198vw; height: 22.292vw; }
+
+.tekst-hudozhnika {
+  position: absolute;
+  top: 19.896vw;
+  left: 5.99vw;
+  width: 28.021vw;
+  height: 23.646vw;
+  overflow: hidden;
+  z-index: 3;
+}
+.obratnyj .tekst-hudozhnika { left: auto; right: 5.99vw; text-align: right; }
+
+.tekst-zagolovok {
+  color: #FFC0DE;
+  font-size: 1.354vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 0.625vw;
+  line-height: 1.2;
+}
+.tekst-osnovnoj {
+  color: #FFFFFF;
+  font-size: 1.354vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* иконки */
+.ikonki { display: flex; gap: 0.521vw; }
+
+.ikonki-na-foto {
+  position: absolute;
+  top: 0.521vw;
+  right: 0.521vw;
+  z-index: 4;
+  flex-direction: column;
+}
+.obratnyj .ikonki-na-foto { right: auto; left: 0.521vw; }
+
+.ikonka-svg { display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.ikonki-na-foto .ikonka-svg { width: 3.646vw; height: 3.646vw; }
+.ikonka-svg img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.ikonka-svg-telegram { color: #A09E9E; }
+.ikonka-svg-twitter  { color: #FFC0DE; }
+
+/* широкие блоки */
+.shirokij-obertka { margin-bottom: 6.354vw; }
+.shirokij-obertka-poslednyaya { margin-bottom: 14.479vw; }
+
+.shirokij-blok {
+  position: relative;
+  width: 100%;
+  height: 26.563vw;
+  background: #ccc;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.shirokij-uv     { background: #ccc url('../img/1-7.png') no-repeat center center; background-size: cover; }
+.shirokij-lokacii{ background: #ccc url('../img/1-8.png') no-repeat center center; background-size: cover; }
+.shirokij-bilety { background: #ccc url('../img/1-9.png') no-repeat center center; background-size: cover; }
+
+.knopka-poverh {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 15.313vw;
+  height: 4.375vw;
+  padding: 0;
+  border: none;
+  border-radius: 1.406vw;
+  background: #C9F955;
+  color: #646264;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.188vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+.knopka-poverh-rozovaya { background: #FFC0DE; }
+
+.podpis-bloka {
+  margin: 0.781vw 0 0 1.302vw;
+  color: #C9F955;
+  font-size: 1.667vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+
+.foto-logo {
+  width: 55.833vw;
+  height: 28.802vw;
+  margin: 0 auto;
+  background: url('../img/1-10.png') no-repeat center center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* подвал */
+.podval {
+  position: relative;
+  width: 100%;
+  height: 15.729vw;
+  margin-top: 27.083vw;
+  background: #A09E9E;
+  z-index: 2;
+}
+
+.podval-festival {
+  position: absolute;
+  left: 9.479vw;
+  top: 2.24vw;
+  width: 41.927vw;
+  height: 5.625vw;
+  background: #3F3D3F;
+  border-radius: 1.667vw;
+  color: #FFC0DE;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.667vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 1.563vw;
+}
+
+.podval-pochta {
+  position: absolute;
+  left: 9.479vw;
+  top: 9.323vw;
+  width: 28.906vw;
+  height: 3.281vw;
+  background: #D6D6D6;
+  border-radius: 1.406vw;
+  color: #646264;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.667vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 1.563vw;
+}
+
+.podval-logo {
+  position: absolute;
+  right: 1.563vw;
+  top: 5.104vw;
+  width: 12.24vw;
+  height: 6.51vw;
+  background: #3F3D3F;
+  border-radius: 1.406vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.podval-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+.ikonka-podvala {
+  position: absolute;
+  width: 4.167vw;
+  height: 4.167vw;
+  color: #C9F955;
+  z-index: 2;
+  text-decoration: none;
+}
+
+/* важно: раньше иконки уходили за правый край — теперь привязаны к правому краю */
+.ikonka-instagram { right: 25.26vw; top: 2.188vw; }
+.ikonka-telegram  { right: 20.31vw; top: 2.188vw; }
+.ikonka-twitter   { right: 15.36vw; top: 2.188vw; }

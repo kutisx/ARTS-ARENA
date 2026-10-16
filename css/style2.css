@@ -1,0 +1,374 @@
+html, body { margin: 0; padding: 0; }
+html { background: #1a1a1a; }
+
+body {
+  position: relative;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  display: flow-root;
+}
+
+@font-face {
+  font-family: 'Stezhok';
+  src: url('../fonts/Stezhok.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fon {
+  position: absolute; inset: 0;
+  background: url('../img/2-1.png') no-repeat top center;
+  background-size: 100% 100%;
+  z-index: -3;
+}
+.zatmenie {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.24);
+  z-index: -2;
+  pointer-events: none;
+}
+.centr {
+  position: absolute; top: 0; bottom: 0;
+  left: 50%;
+  margin-left: -35.417vw;
+  width: 70.833vw;
+  background: rgba(0,0,0,0.24);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* шапка на гридах */
+.shapka {
+  width: 95.677vw;
+  max-width: 100%;
+  height: 4.6875vw;
+  margin: 2.813vw auto 0;
+  background: #D6D6D6;
+  border-radius: 1.927vw;
+  display: grid;
+  grid-template-columns: 9.115vw 1fr;
+  align-items: center;
+  padding: 0 1.042vw;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.logo-shapki {
+  width: 9.115vw;
+  height: 3.958vw;
+  background: #3F3D3F;
+  border-radius: 1.406vw;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+.logo-shapki img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+.knopki-shapki {
+  display: grid;
+  grid-template-columns: repeat(4, 12.292vw);
+  gap: 0.625vw;
+  align-items: center;
+  justify-content: end;
+}
+.ssylka-knopka { text-decoration: none; }
+
+.knopka {
+  background: #ccc;
+  border: 1px solid #999;
+  padding: 0.625vw 1.302vw;
+  cursor: pointer;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.833vw;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.knopka-hudozhniki,
+.knopka-vystavka,
+.knopka-karta,
+.knopka-bilety {
+  width: 12.292vw;
+  height: 3.333vw;
+  border: none;
+  border-radius: 1.406vw;
+  font-size: 1.667vw;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  padding: 0; margin: 0;
+  cursor: pointer;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.knopka-hudozhniki { background: #A09E9E; color: #FFC0DE; }
+.knopka-vystavka    { background: #FFC0DE; color: #3F3D3F; }
+.knopka-karta       { background: #3F3D3F; color: #FFC0DE; }
+.knopka-bilety      { background: #C9F955; color: #3F3D3F; }
+.knopka-aktiv       { background: #FFC0DE; color: #3F3D3F; }
+
+.knopka:hover,
+.knopka-poverh:hover { filter: brightness(0.9); text-decoration: underline; }
+
+/* заголовки */
+.zagolovok-uv {
+  position: absolute;
+  top: 11.615vw;
+  left: calc(50% - 32.604vw);
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14.635vw;
+  color: #FFC0DE;
+  line-height: 1;
+  z-index: 2;
+}
+
+.zagolovok-vystavka {
+  position: absolute;
+  top: 10.469vw;
+  left: calc(50% - 20.26vw);
+  font-family: 'Stezhok', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 19.792vw;
+  color: #C9F955;
+  line-height: 1;
+  z-index: 2;
+}
+
+.teksty-vystavki {
+  width: 59.896vw;
+  margin: 18.438vw auto 0;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  position: relative;
+  z-index: 2;
+}
+
+.tekst-blok { height: 19.01vw; overflow: hidden; }
+
+.tekst-zagolovok {
+  color: #FFC0DE;
+  font-size: 1.354vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 0.625vw;
+  line-height: 1.2;
+  text-align: left;
+}
+.tekst-osnovnoj {
+  color: #FFFFFF;
+  font-size: 1.354vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+.tekst-malenkij {
+  margin-top: 3.125vw;
+  color: #C9F955;
+  font-size: 1.354vw;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* слайдер */
+.slajder {
+  margin-top: 6.771vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4.167vw 46.875vw 4.167vw;
+  column-gap: 1.042vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.strelka-knopka {
+  width: 4.167vw;
+  height: 4.167vw;
+  background: #FFC0DE;
+  border-radius: 0.208vw;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.treugolnik { width: 0; height: 0; border-style: solid; pointer-events: none; }
+.treugolnik-vlevo  { border-width: 1.042vw 1.563vw 1.042vw 0; border-color: transparent #3F3D3F transparent transparent; }
+.treugolnik-vpravo { border-width: 1.042vw 0 1.042vw 1.563vw; border-color: transparent transparent transparent #3F3D3F; }
+
+.slajd-okno { width: 46.875vw; height: 25.885vw; overflow: hidden; }
+.slajd-track { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; height: 100%; transition: transform 0.5s ease; }
+.slajd {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 21.667vw 2.917vw;
+  row-gap: 1.302vw;
+}
+.slajd-slot {
+  width: 46.875vw;
+  height: 21.667vw;
+  border-radius: 1.406vw;
+  overflow: hidden;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+.slajd-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.podpis-slajda {
+  width: 46.875vw;
+  height: 2.917vw;
+  background: #646264;
+  border-radius: 1.406vw;
+  color: #FFC0DE;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.667vw;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.foto-na-vsyu-shirinu {
+  position: relative;
+  width: 100%;
+  height: 41.042vw;
+  margin-top: 3.125vw;
+  background: url('../img/2-3.png') no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+  z-index: 2;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+}
+
+.slot-video {
+  position: absolute;
+  top: 5.417vw;
+  left: calc(50% - 35.417vw);
+  width: 54.375vw;
+  height: 30.208vw;
+  border-radius: 1.406vw;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+  z-index: 3;
+}
+.slot-video iframe { width: 100%; height: 100%; border: none; display: block; }
+
+.knopka-bilety-vertikalno {
+  position: absolute;
+  top: 5.417vw;
+  left: calc(50% + 19.792vw);
+  width: 15.417vw;
+  height: 30.208vw;
+  background: #C9F955;
+  border: none;
+  border-radius: 1.406vw;
+  color: #3F3D3F;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 7.083vw;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  box-shadow: 0 0.208vw 0.208vw rgba(0,0,0,0.4);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  overflow: hidden;
+  z-index: 3;
+}
+.knopka-bilety-vertikalno:hover { filter: brightness(0.9); text-decoration: underline; }
+
+/* подвал */
+.podval {
+  position: relative;
+  width: 100%;
+  height: 15.729vw;
+  margin-top: 0;
+  background: #A09E9E;
+  z-index: 2;
+}
+
+.podval-festival {
+  position: absolute;
+  left: 9.479vw;
+  top: 2.24vw;
+  width: 41.927vw;
+  height: 5.625vw;
+  background: #3F3D3F;
+  border-radius: 1.667vw;
+  color: #FFC0DE;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.667vw;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 0 1.563vw;
+}
+
+.podval-pochta {
+  position: absolute;
+  left: 9.479vw;
+  top: 9.323vw;
+  width: 28.906vw;
+  height: 3.281vw;
+  background: #D6D6D6;
+  border-radius: 1.406vw;
+  color: #646264;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.667vw;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 0 1.563vw;
+}
+
+.podval-logo {
+  position: absolute;
+  right: 1.563vw;
+  top: 5.104vw;
+  width: 12.24vw;
+  height: 6.51vw;
+  background: #3F3D3F;
+  border-radius: 1.406vw;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.podval-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+.ikonka-podvala {
+  position: absolute;
+  width: 4.167vw;
+  height: 4.167vw;
+  color: #C9F955;
+  z-index: 2;
+  text-decoration: none;
+}
+.ikonka-instagram { right: 25.26vw; top: 2.188vw; }
+.ikonka-telegram  { right: 20.31vw; top: 2.188vw; }
+.ikonka-twitter   { right: 15.36vw; top: 2.188vw; }
+
+.ikonka-svg { display: grid; place-items: center; }
+.ikonka-svg img { width: 100%; height: 100%; object-fit: contain; display: block; }
