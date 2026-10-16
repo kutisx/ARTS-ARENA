@@ -18,9 +18,8 @@ ARTS ARENA — сайт фестиваля современного цифров
 
 ## Ссылка на GitHub Pages
 
-[https://<ваш-username>.github.io/arts-arena/](https://<ваш-username>.github.io/arts-arena/)
+https://kutisx.github.io/ARTS-ARENA/
 
-*(замените `<ваш-username>` на ваш логин GitHub после деплоя)*
 
 ## Стек
 
